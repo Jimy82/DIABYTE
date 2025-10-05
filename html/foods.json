@@ -1,0 +1,14 @@
+[
+    { "tipo": "Lacteos", "nombre": "Cuajada", "hidratos": 200, "glucemico": 35, "url": "https://es.wikipedia.org/wiki/Cuajada", "imagen": "imagenes/245px-Cuajada_cropped_-_juantigues.jpg" },
+    { "tipo": "Lacteos", "nombre": "Flan", "hidratos": 50, "glucemico": 10, "url": "https://es.wikipedia.org/wiki/Flan", "imagen": "imagenes/Crème_caramel_2.jpg" },
+    { "tipo": "Lacteos", "nombre": "Helado de Crema", "hidratos": 50, "glucemico": 60, "url": "https://es.wikipedia.org/wiki/Helado_de_crema", "imagen": "imagenes/priscilla-du-preez-oATsyWX2hpo-unsplash.jpg" },
+    { "tipo": "Lacteos", "nombre": "Helado de Hielo", "hidratos": 50, "glucemico": 65, "url": "https://es.wikipedia.org/wiki/Helado", "imagen": "imagenes/220px-RaspberrySherbet.jpg" },
+    { "tipo": "Lacteos", "nombre": "Helado sin Azúcar", "hidratos": 100, "glucemico": 35, "url": "https://es.wikipedia.org/wiki/K%C3%A9fir", "imagen": "imagenes/220px-RaspberrySherbet.jpg" },
+    { "tipo": "Lacteos", "nombre": "Kefir", "hidratos": 200, "glucemico": 35, "url": "https://es.wikipedia.org/wiki/K%C3%A9fir", "imagen": "imagenes/377px-Kefir_in_a_glass.jpeg" },
+    { "tipo": "Lacteos", "nombre": "Leche desnatada", "hidratos": 200, "glucemico": 32, "url": "https://es.wikipedia.org/wiki/Leche_descremada", "imagen": "imagenes/nikolai-chernichenko-S1HuosAnX-Y-unsplash.jpg" },
+    { "tipo": "Lacteos", "nombre": "Leche semidesnatada", "hidratos": 200, "glucemico": 30, "url": "https://es.wikipedia.org/wiki/Flan", "imagen": "imagenes/eiliv-aceron-_8bnn1GqX70-unsplash.jpg" },
+    { "tipo": "Lacteos", "nombre": "Leche entera", "hidratos": 200, "glucemico": 27, "url": "https://es.wikipedia.org/wiki/Leche", "imagen": "imagenes/Milk_glass.jpg" },
+    { "tipo": "Lacteos", "nombre": "Flan", "hidratos": 50, "glucemico": 10, "url": "https://es.wikipedia.org/wiki/Flan", "imagen": "imagenes/Crème_caramel_2.jpg" },
+    // Agrega más alimentos aquí...
+  ]
+  

@@ -1,0 +1,174 @@
+/* === Variables === */
+:root {
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  --bg: #f6f7fb;
+  --fg: #1f2937;
+  --accent: #1f6feb;
+  --accent-hover: #1557b0;
+  --danger: #e11d48;
+  --card-bg: #fff;
+  --radius: 12px;
+  --shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+/* === Reset básico === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.5;
+  padding: 1.5rem;
+}
+
+/* === Estructura === */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* === Encabezados === */
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  text-align: left;
+}
+h1 { font-size: 1.4rem; }
+h2 { font-size: 1.2rem; }
+
+/* === Formularios === */
+form {
+  display: block;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-size: .9rem;
+  font-weight: 500;
+  margin-bottom: .25rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: .6rem .7rem;
+  border: 1px solid #d7dbdf;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: #fff;
+  font-size: .95rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+/* === Botones === */
+button,
+input[type="submit"],
+.btn {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: .65rem 1rem;
+  cursor: pointer;
+  transition: background .2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+button:hover,
+input[type="submit"]:hover,
+.btn:hover {
+  background: var(--accent-hover);
+}
+
+.btn-del {
+  background: var(--danger);
+}
+.btn-del:hover {
+  background: #b91c1c;
+}
+
+/* === Alertas === */
+.alert {
+  padding: .7rem .9rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: .9rem;
+}
+.alert-ok {
+  background: #e6ffed;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+}
+.alert-err {
+  background: #ffe8e8;
+  border: 1px solid #f4bcbc;
+  color: #8a1c1c;
+}
+
+/* === Tablas === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+th, td {
+  padding: .6rem .7rem;
+  border-bottom: 1px solid #e9edf2;
+  text-align: left;
+}
+th {
+  background: #f2f5fb;
+  font-weight: 600;
+}
+
+/* === Navegación === */
+nav {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 1rem;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* === Utilitarios === */
+.text-center { text-align: center; }
+.text-muted { color: #6b7280; }
+.mt-1 { margin-top: .5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 700px) {
+  .grid-2 { grid-template-columns: 1fr; }
+}
