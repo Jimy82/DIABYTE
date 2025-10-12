@@ -21,3 +21,4 @@ build/
 *.zip
 *.tar
 *.tar.gz
+db_data/
