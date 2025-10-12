@@ -1,6 +1,23 @@
+# DB / contenedores
 db_data/
+*.sql
+*.sqlite
+*.db
+# Logs y sistemas
 *.log
-.env
-vendor/
-node_modules/
 .DS_Store
+.env
+# PHP / Composer
+vendor/
+# Node / front
+node_modules/
+dist/
+build/
+# IDEs
+.vscode/
+.idea/
+*.iml
+# Otros
+*.zip
+*.tar
+*.tar.gz
