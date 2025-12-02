@@ -1,11 +1,14 @@
 <?php
 declare(strict_types=1);
 
-$autoloads = [
-  __DIR__ . '/vendor/autoload.php',
-  dirname(__DIR__) . '/vendor/autoload.php',
-];
-foreach ($autoloads as $a) { if (file_exists($a)) { require $a; break; } }
+$autoload = __DIR__ . '/app/vendor/autoload.php';
+if (file_exists($autoload)) {
+    require $autoload;
+} else {
+    die("Falta autoload: $autoload");
+}
+
+
 
 session_start();
 
