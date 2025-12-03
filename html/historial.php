@@ -1,35 +1,45 @@
 <?php
 declare(strict_types=1);
 session_start();
-if (empty($_SESSION["user_id"])) { header("Location: /login.php", true, 303); exit; }
+if (empty($_SESSION["user_id"])) {
+    header("Location: /login.php", true, 303);
+    exit;
+}
+
 require __DIR__."/config/db.php";
 $pdo = db();
 $uid = (int)$_SESSION["user_id"];
 
-$sqlA = "SELECT i.id, i.occurred_at, f.name,
-                i.grams, i.carbs_g, i.dose_units, i.pre_bg, i.post_bg
-         FROM v_intakes i
-         LEFT JOIN foods f ON f.id = i.food_id
-         WHERE i.user_id = ?
-         ORDER BY i.occurred_at DESC
-         LIMIT 200";
+/*
+   En el nuevo schema:
+   - intakes.source_type = 'food' --> source_id referencia foods.id
+   - intakes.source_type = 'recipe' --> source_id referencia recipes.id
+*/
 
-try {
-  $st = $pdo->prepare($sqlA);
-  $st->execute([$uid]);
-} catch (Throwable $e) {
-  // Fallback si no existe v_intakes
-  $sqlB = "SELECT i.id, i.occurred_at, f.name,
-                  i.grams, i.carbs_g, i.dose_units, i.pre_bg, i.post_bg
-           FROM intakes i
-           LEFT JOIN foods f
-             ON f.id = COALESCE(i.food_id, CASE WHEN i.source_type=food THEN i.source_id END)
-           WHERE i.user_id = ?
-           ORDER BY i.occurred_at DESC
-           LIMIT 200";
-  $st = $pdo->prepare($sqlB);
-  $st->execute([$uid]);
-}
+$sql = "
+    SELECT
+        i.id,
+        i.occurred_at,
+        i.grams,
+        i.carbs_g,
+        i.dose_units,
+        i.pre_bg,
+        i.post_bg,
+        CASE
+            WHEN i.source_type = 'food' THEN f.name
+            WHEN i.source_type = 'recipe' THEN r.name
+            ELSE '—'
+        END AS name
+    FROM intakes i
+    LEFT JOIN foods f   ON (i.source_type = 'food'   AND f.id = i.source_id)
+    LEFT JOIN recipes r ON (i.source_type = 'recipe' AND r.id = i.source_id)
+    WHERE i.user_id = ?
+    ORDER BY i.occurred_at DESC
+    LIMIT 200
+";
+
+$st = $pdo->prepare($sql);
+$st->execute([$uid]);
 $rows = $st->fetchAll();
 ?>
 <!doctype html>
