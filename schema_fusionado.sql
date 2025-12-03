@@ -1,7 +1,3 @@
--- =========================================
--- ESQUEMA COMPLETO DAW INSULINA v1.0 + FUSIÓN DE ALIMENTOS
--- =========================================
-
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -37,7 +33,6 @@ CREATE TABLE insulin_params (
   updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   CONSTRAINT fk_insulin_params_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
 CREATE TABLE foods (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(190) NOT NULL,
@@ -74,7 +69,6 @@ CREATE TABLE recipe_items (
   CONSTRAINT fk_recipe_items_recipe FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE,
   CONSTRAINT fk_recipe_items_food FOREIGN KEY (food_id) REFERENCES foods(id) ON DELETE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
 CREATE TABLE menus (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   user_id INT UNSIGNED NOT NULL,
@@ -115,10 +109,10 @@ INSERT INTO users (email, password_hash, full_name, role)
 VALUES ('admin@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Admin', 'admin');
 
 INSERT INTO insulin_params (user_id) SELECT id FROM users WHERE email='admin@example.com';
-
--- Fusión desde tabla alimentos
 START TRANSACTION;
+
 DROP TEMPORARY TABLE IF EXISTS _alimentos_clean;
+
 CREATE TEMPORARY TABLE _alimentos_clean (
   name VARCHAR(190) NOT NULL,
   carbs_per_100g DECIMAL(6,2) NOT NULL,
@@ -127,17 +121,13 @@ CREATE TEMPORARY TABLE _alimentos_clean (
   brand VARCHAR(120) NULL
 ) ENGINE=Memory DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO _alimentos_clean (name, carbs_per_100g, glycemic_index, unit, brand)
-SELECT TRIM(nombre),
-       ROUND(GREATEST(0, LEAST(100, IFNULL(hidratos, 0))),2),
-       CASE WHEN glucemico IS NULL THEN NULL
-            WHEN glucemico < 0 THEN NULL
-            WHEN glucemico > 120 THEN 120
-            ELSE glucemico END,
-       'g',
-       NULLIF(TRIM(tipo), '')
-FROM alimentos
-WHERE TRIM(nombre) <> '';
+LOAD DATA LOCAL INFILE '/docker-entrypoint-initdb.d/alimentos.csv'
+INTO TABLE _alimentos_clean
+FIELDS TERMINATED BY ';'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(name, carbs_per_100g, glycemic_index, unit, brand);
 
 INSERT INTO foods (name, carbs_per_100g, glycemic_index, unit, brand, created_by)
 SELECT c.name, c.carbs_per_100g, c.glycemic_index, c.unit, c.brand, NULL
@@ -150,10 +140,6 @@ JOIN _alimentos_clean c ON c.name = f.name
 SET f.carbs_per_100g = c.carbs_per_100g,
     f.glycemic_index = c.glycemic_index,
     f.unit = c.unit,
-    f.brand = COALESCE(c.brand, f.brand)
-WHERE (f.carbs_per_100g <> c.carbs_per_100g)
-   OR (f.glycemic_index <> c.glycemic_index)
-   OR (f.unit <> c.unit)
-   OR (f.brand <> c.brand);
+    f.brand = COALESCE(c.brand, f.brand);
 
 COMMIT;
