@@ -33,9 +33,13 @@ $st->bindValue(':off',$off,PDO::PARAM_INT);
 $st->execute();
 $rows = $st->fetchAll(PDO::FETCH_ASSOC);
 ?>
-<!doctype html><html lang="es"><head>
-<meta charset="utf-8"><title>Alimentos</title>
-<link rel="stylesheet" href="/estilo.css">
+<!doctype html><html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Registro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/estilo.css">
+  <link rel="icon" type="image/png" href="/diabyte-logo.png">
 <!--<style>
 form.inline{display:inline}
 table{border-collapse:collapse;width:100%}

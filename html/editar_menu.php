@@ -207,9 +207,10 @@ $okFlag = isset($_GET['ok']) && (int)$_GET['ok'] === 1;
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="/estilo.css">
-  <title>Editar menú — <?= htmlspecialchars($date, ENT_QUOTES, 'UTF-8') ?></title>
+  <title>Registro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="diabyte-logo-v1.png">
+  <link rel="stylesheet" href="/estilo.css">
   <!--<style>
     :root { font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans",sans-serif; }
     body { margin:0; padding:1rem; background:#f6f7fb; }

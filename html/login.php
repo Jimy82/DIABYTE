@@ -138,8 +138,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Iniciar sesión</title>
+  <title>Registro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="diabyte-logo-v1.png">
   <link rel="stylesheet" href="/estilo.css">
   <!--<style>
     :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; }

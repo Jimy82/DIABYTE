@@ -31,10 +31,11 @@ $csrf = csrf_token();
 <!doctype html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <title>Calculadora de hidratos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/estilo.css">
+  <meta charset="utf-8">
+  <title>Registro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/estilo.css">
+  <link rel="icon" type="image/png" href="diabyte-logo-v1.png">
     <!--<style>
         .form-grid {
             display: grid;

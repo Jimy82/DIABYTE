@@ -102,9 +102,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Eliminar menú <?= htmlspecialchars($date, ENT_QUOTES, 'UTF-8') ?></title>
+  <title>Registro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
+  <link rel="icon" type="image/png" href="diabyte-logo-v1.png">
+  <link rel="stylesheet" href="/estilo.css">
+  <!--<style>
     :root { font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans",sans-serif; }
     body { margin:0; padding:2rem; background:#f6f7fb; }
     .card { max-width:520px; margin:0 auto; background:#fff; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,.08); padding:1.5rem 1.75rem; }
@@ -115,7 +117,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     button { border:0; border-radius:8px; padding:.7rem 1rem; font-weight:600; cursor:pointer; }
     .btn-del { background:#e11d48; color:#fff; }
     .btn-cancel { background:#e2e8f0; }
-  </style>
+  </style>-->
 </head>
 <body>
   <main class="card">

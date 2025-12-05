@@ -518,3 +518,114 @@ main.card {
     -webkit-tap-highlight-color: transparent; 
   }
 }
+body {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+main, .container {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.desk {
+  width: 100%;
+  text-align: center;
+}
+
+.logo-desk {
+  width: 300px;
+  margin: 2rem auto;
+  display: block;
+}
+body {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+main, .container {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ================================================
+   AJUSTES DE ESCRITORIO – PERFECT PIXEL MATCH
+   ================================================ */
+
+.desk-wrap {
+  width: 100%;
+  margin: 0;
+  padding-top: 2rem;     /* aire superior exacto a la maqueta */
+}
+
+/* Título alineado igual que en la imagen */
+h1 {
+  text-align: left !important;
+  margin-left: 2.2rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Subtítulo igual que en la referencia */
+.desk-subtitle {
+  text-align: left;
+  margin-left: 2.2rem;
+  margin-top: -0.3rem;
+  font-weight: 600;
+}
+
+/* ================================================
+   CONTENEDOR CIRCULAR PARA EL LOGOTIPO (TAMAÑO AJUSTADO)
+   ================================================ */
+
+.logo-circle {
+  width: 300px;               /* tamaño final más elegante */
+  height: 300px;              /* mismo valor → círculo perfecto */
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 1.5rem auto;        /* centrado perfecto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00000033;      /* fondo suave para modo oscuro */
+}
+
+/* Ajuste del logo dentro del círculo */
+.logo-circle img {
+  width: 115%;                /* para que llene y no queden bordes */
+  height: auto;
+}
+
+
+/* Botonera centrada con la misma separación que la imagen */
+.desk-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;                /* separación igual a la maqueta */
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+
+/* === LOGOTIPO CIRCULAR DEFINITIVO === */
+
+.logo-circle {
+  width: 260px;                 /* tamaño perfecto según tu referencia */
+  height: 260px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem auto;
+}
+
+.logo-circle {
+  padding: 10px; /* añade un margen interno invisible */
+}
+
+
+

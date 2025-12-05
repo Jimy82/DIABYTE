@@ -46,8 +46,10 @@ $rows = $st->fetchAll();
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <title>Registro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="diabyte-logo-v1.png">
   <link rel="stylesheet" href="/estilo.css">
-  <title>Historial</title>
   <!--<style>
     table{border-collapse:collapse;width:100%}
     th,td{border:1px solid #ccc;padding:.4rem;text-align:left}
