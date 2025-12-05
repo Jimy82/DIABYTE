@@ -127,7 +127,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
   <meta charset="utf-8">
   <title>Registro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
+  <link rel="stylesheet" href="/estilo.css">
+  <link rel="icon" type="image/png" href="/diabyte-logo.png">
+
+  <!--<style>
     :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; }
     body { margin:0; padding:2rem; background:#f6f7fb; }
     .card { max-width: 520px; margin: 0 auto; background:#fff; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,.08); padding:1.5rem 1.75rem; }
@@ -142,7 +145,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     .actions { margin-top:1.25rem; display:flex; gap:.75rem; align-items:center; }
     button { border:0; background:#1f6feb; color:#fff; padding:.7rem 1rem; border-radius:8px; font-weight:600; cursor:pointer; }
     a { color:#1f6feb; text-decoration:none; }
-  </style>
+  </style>-->
 </head>
 <body>
   <main class="card">

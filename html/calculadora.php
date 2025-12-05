@@ -35,7 +35,7 @@ $csrf = csrf_token();
     <title>Calculadora de hidratos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/estilo.css">
-    <style>
+    <!--<style>
         .form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -47,7 +47,7 @@ $csrf = csrf_token();
             border: 1px solid #ddd;
             border-radius: .5rem;
         }
-    </style>
+    </style>-->
 </head>
 <body>
 <div class="container card">

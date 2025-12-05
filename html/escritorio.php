@@ -25,13 +25,14 @@ $msg = isset($_GET["msg"]) ? (string)$_GET["msg"] : null;
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="/estilo.css">
   <title>Escritorio</title>
-  <style>
+  <!--<style>
     body{font-family:sans-serif;max-width:880px;margin:1.2rem auto;padding:0 1rem}
     .btn{padding:.5rem .8rem;background:#eee;border:1px solid #ccc;border-radius:.4rem;text-decoration:none;display:inline-block;margin:.2rem 0}
     .row{margin:.6rem 0}
     .msg{color:green;margin:.5rem 0}
-  </style>
+  </style>-->
 </head>
 <body>
   <h1>Escritorio</h1>

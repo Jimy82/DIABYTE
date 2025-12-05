@@ -49,12 +49,12 @@ $p = $st->fetch(PDO::FETCH_ASSOC);
 <!doctype html><html lang="es"><head>
 <meta charset="utf-8"><title>Parámetros personales</title>
 <link rel="stylesheet" href="/estilo.css">
-<style>
+<!--<style>
   form{max-width:520px;margin:2rem auto;padding:1rem;border:1px solid #ddd;border-radius:12px}
   label{display:block;margin:.6rem 0 .2rem}
   input{width:100%;padding:.5rem}
   .msg{margin:.8rem 0}
-</style>
+</style>-->
 </head><body>
   <nav style="margin:1rem">
     <a href="/escritorio.php">Dashboard</a> ·

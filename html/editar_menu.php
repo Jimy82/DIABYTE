@@ -207,9 +207,10 @@ $okFlag = isset($_GET['ok']) && (int)$_GET['ok'] === 1;
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="/estilo.css">
   <title>Editar menú — <?= htmlspecialchars($date, ENT_QUOTES, 'UTF-8') ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
+  <!--<style>
     :root { font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans",sans-serif; }
     body { margin:0; padding:1rem; background:#f6f7fb; }
     header { max-width:1100px; margin:0 auto 1rem; display:flex; justify-content:space-between; align-items:center; }
@@ -228,7 +229,7 @@ $okFlag = isset($_GET['ok']) && (int)$_GET['ok'] === 1;
     input, select { padding:.45rem .5rem; border:1px solid #d7dbdf; border-radius:8px; }
     button { border:0; background:#1f6feb; color:#fff; padding:.55rem .8rem; border-radius:8px; font-weight:600; cursor:pointer; }
     .muted { color:#889099; }
-  </style>
+  </style>-->
 </head>
 <body>
   <header>

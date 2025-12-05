@@ -46,12 +46,13 @@ $rows = $st->fetchAll();
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="/estilo.css">
   <title>Historial</title>
-  <style>
+  <!--<style>
     table{border-collapse:collapse;width:100%}
     th,td{border:1px solid #ccc;padding:.4rem;text-align:left}
     .btn{padding:.4rem .6rem;border:1px solid #ccc;background:#eee;border-radius:.3rem;text-decoration:none}
-  </style>
+  </style>-->
 </head>
 <body>
   <h1>Historial</h1>

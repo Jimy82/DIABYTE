@@ -79,7 +79,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
   <meta charset="utf-8">
   <title>Calculadora de insulina</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href=">/estilo.css">
 </head>
 <body>
   <div class="container card">

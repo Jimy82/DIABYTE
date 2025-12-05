@@ -36,14 +36,14 @@ $rows = $st->fetchAll(PDO::FETCH_ASSOC);
 <!doctype html><html lang="es"><head>
 <meta charset="utf-8"><title>Alimentos</title>
 <link rel="stylesheet" href="/estilo.css">
-<style>
+<!--<style>
 form.inline{display:inline}
 table{border-collapse:collapse;width:100%}
 th,td{border:1px solid #ddd;padding:.4rem;font-size:.95rem}
 thead{background:#f3f3f3}
 input[type=text],input[type=number]{padding:.35rem}
 .actions{display:flex;gap:.4rem}
-</style>
+</style>-->
 </head><body>
 <nav><a href="/escritorio.php">← Volver</a></nav>
 <h1>Alimentos</h1>
