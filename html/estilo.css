@@ -626,6 +626,50 @@ h1 {
 .logo-circle {
   padding: 10px; /* añade un margen interno invisible */
 }
+/* === FIX PARA LA PÁGINA DE LOGIN (evita estirado completo) === */
+.login-wrap {
+  max-width: 480px !important;
+  margin: 0 auto !important;
+  padding: 2rem 1.5rem !important;
+}
+
+.login-wrap h1 {
+  text-align: center !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.login-wrap .actions {
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+.login-wrap button,
+.login-wrap .btn,
+.login-wrap input[type="submit"] {
+  width: 100% !important;
+}
+/* === FIX LOGIN RESPONSIVE (evita que se estire a pantalla completa) === */
+.login-wrap {
+  max-width: 480px !important;
+  margin: 3rem auto !important;
+  padding: 2rem 1.8rem !important;
+  text-align: left !important;
+}
+
+.login-wrap h1 {
+  text-align: center !important;
+  margin-bottom: 1.8rem !important;
+}
+
+.login-wrap .actions {
+  flex-direction: column !important;
+  gap: 1.2rem !important;
+}
+
+.login-wrap button,
+.login-wrap input[type="submit"] {
+  width: 100% !important;
+}
 
 
 

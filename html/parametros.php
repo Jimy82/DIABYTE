@@ -53,6 +53,8 @@ $p = $st->fetch(PDO::FETCH_ASSOC);
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="diabyte-logo-v1.png">
   <link rel="stylesheet" href="/estilo.css">
+  <link rel="icon" type="image/png" href="/diabyte-logo.png">
+
 <!--<style>
   form{max-width:520px;margin:2rem auto;padding:1rem;border:1px solid #ddd;border-radius:12px}
   label{display:block;margin:.6rem 0 .2rem}
@@ -61,15 +63,16 @@ $p = $st->fetch(PDO::FETCH_ASSOC);
 </style>-->
 </head>
 <body>
-  <nav style="margin:1rem">
-    <a href="/escritorio.php">Dashboard</a> ·
-    <a href="/calculadora.php">Calculadora</a> ·
-    <a href="/historial.php">Historial</a> ·
-    <strong>Parámetros</strong>
-  </nav>
+  <div class="desk-buttons">
+    <a href="/escritorio.php" class="btn">Escritorio</a>
+    <a href="/alimentos.php" class="btn">Alimentos</a>
+    <a href="/calculadora.php" class="btn">Calculadora</a>
+    <a href="/editar_menu.php" class="btn">Editar menú</a>
+    <a href="/logout.php" class="btn">Salir</a>
+  </div>
 
   <form method="post">
-    <h2>Parámetros personales</h2>
+    <h2>Parámetros</h2>
     <?php if ($ok): ?><div class="msg" style="color:green"><?=htmlspecialchars($ok)?></div><?php endif; ?>
     <?php if ($err): ?><div class="msg" style="color:#b00"><?=htmlspecialchars($err)?></div><?php endif; ?>
     <input type="hidden" name="csrf" value="<?=htmlspecialchars($csrf)?>">

@@ -50,6 +50,8 @@ $rows = $st->fetchAll();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="diabyte-logo-v1.png">
   <link rel="stylesheet" href="/estilo.css">
+  <link rel="icon" type="image/png" href="/diabyte-logo.png">
+
   <!--<style>
     table{border-collapse:collapse;width:100%}
     th,td{border:1px solid #ccc;padding:.4rem;text-align:left}
@@ -57,8 +59,14 @@ $rows = $st->fetchAll();
   </style>-->
 </head>
 <body>
-  <h1>Historial</h1>
-  <p><a class="btn" href="/escritorio.php">Volver</a></p>
+  <div class="desk-buttons">
+    <a href="/Escritorio.php" class="btn">Escritorio</a>
+    <a href="/editar_menu.php" class="btn">Editar menú</a>
+    <a href="/alimentos.php" class="btn">Alimentos</a>
+    <a href="/calculadora.php" class="btn">Calculadora</a>
+    <a href="/parametros.php" class="btn">Parámetros</a>
+    <a href="/logout.php" class="btn">Salir</a>
+  </div>
 
   <?php if (!$rows): ?>
     <p>No hay ingestas aún.</p>

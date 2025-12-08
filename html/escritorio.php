@@ -28,6 +28,8 @@ $msg = $_GET["msg"] ?? null;
   <title>Escritorio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/estilo.css">
+  <link rel="icon" type="image/png" href="/diabyte-logo.png">
+
 
   <style>
     .desk-wrap {
@@ -57,8 +59,8 @@ $msg = $_GET["msg"] ?? null;
 
 <div class="desk-wrap">
 
-  <h1>Escritorio</h1>
-  <p><strong>Ingestas de hoy:</strong> <?= $todayCount ?></p>
+  <h1></h1>
+  <!--<p><strong>Ingestas de hoy:</strong> <?= $todayCount ?></p>-->
 
   <div class="logo-circle">
     <img src="diabyte-logo1.png" alt="DIABYTE">
@@ -70,11 +72,11 @@ $msg = $_GET["msg"] ?? null;
   <?php endif; ?>
 
   <div class="desk-buttons">
-    <a href="/editar_menu.php" class="btn">Editar menú</a>
     <a href="/alimentos.php" class="btn">Alimentos</a>
     <a href="/calculadora.php" class="btn">Calculadora</a>
+    <a href="/editar_menu.php" class="btn">Editar menú</a>
     <a href="/historial.php" class="btn">Historial</a>
-    <a href="/parametros.php" class="btn">Parámetros personales</a>
+    <a href="/parametros.php" class="btn">Parámetros</a>
     <a href="/logout.php" class="btn">Salir</a>
   </div>
 

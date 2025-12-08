@@ -49,7 +49,14 @@ input[type=text],input[type=number]{padding:.35rem}
 .actions{display:flex;gap:.4rem}
 </style>-->
 </head><body>
-<nav><a href="/escritorio.php">← Volver</a></nav>
+<div class="desk-buttons">
+    <a href="/escritorio.php" class="btn">Escritorio</a>
+    <a href="/calculadora.php" class="btn">Calculadora</a>
+    <a href="/editar_menu.php" class="btn">Editar menú</a>
+    <a href="/historial.php" class="btn">Historial</a>
+    <a href="/parametros.php" class="btn">Parámetros</a>
+    <a href="/logout.php" class="btn">Salir</a>
+  </div>
 <h1>Alimentos</h1>
 
 <section>

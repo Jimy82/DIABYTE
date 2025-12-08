@@ -35,7 +35,8 @@ $csrf = csrf_token();
   <title>Registro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/estilo.css">
-  <link rel="icon" type="image/png" href="diabyte-logo-v1.png">
+  <link rel="icon" type="image/png" href="/diabyte-logo.png">
+
     <!--<style>
         .form-grid {
             display: grid;
@@ -51,6 +52,14 @@ $csrf = csrf_token();
     </style>-->
 </head>
 <body>
+    <div class="desk-buttons">
+    <a href="/escritorio.php" class="btn">Escritorio</a>
+    <a href="/editar_menu.php" class="btn">Editar menú</a>
+    <a href="/alimentos.php" class="btn">Alimentos</a>
+    <a href="/historial.php" class="btn">Historial</a>
+    <a href="/parametros.php" class="btn">Parámetros</a>
+    <a href="/logout.php" class="btn">Salir</a>
+  </div>
 <div class="container card">
     <h1>Calculadora de hidratos</h1>
 
@@ -84,10 +93,6 @@ $csrf = csrf_token();
         <input type="number" id="post_bg" step="1" min="40" max="400">
         <button type="button" id="btnSave">Guardar ingesta</button>
         <a class="btn" href="/historial.php">Ver historial</a>
-    </div>
-
-    <div class="mt-2">
-        <a href="/alimentos.php">Volver a alimentos</a>
     </div>
 </div>
 

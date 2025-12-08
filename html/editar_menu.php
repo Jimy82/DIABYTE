@@ -211,6 +211,8 @@ $okFlag = isset($_GET['ok']) && (int)$_GET['ok'] === 1;
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="diabyte-logo-v1.png">
   <link rel="stylesheet" href="/estilo.css">
+  <link rel="icon" type="image/png" href="/diabyte-logo.png">
+
   <!--<style>
     :root { font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans",sans-serif; }
     body { margin:0; padding:1rem; background:#f6f7fb; }
@@ -233,14 +235,18 @@ $okFlag = isset($_GET['ok']) && (int)$_GET['ok'] === 1;
   </style>-->
 </head>
 <body>
+  <div class="desk-buttons">
+    <a href="/Escritorio.php" class="btn">Escritorio</a>
+    <a href="/alimentos.php" class="btn">Alimentos</a>
+    <a href="/calculadora.php" class="btn">Calculadora</a>
+    <a href="/parametros.php" class="btn">Parámetros</a>
+    <a href="/logout.php" class="btn">Salir</a>
+  </div>
   <header>
     <div>
       <div class="small muted">Menú de</div>
       <h1 style="margin:.1rem 0; font-size:1.25rem;"><?= htmlspecialchars($date, ENT_QUOTES, 'UTF-8') ?></h1>
     </div>
-    <nav class="small">
-      <a href="dashboard">Volver al panel</a>
-    </nav>
   </header>
 
   <main class="container">
