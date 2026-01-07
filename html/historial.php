@@ -60,11 +60,11 @@ $rows = $st->fetchAll();
 </head>
 <body>
   <div class="desk-buttons">
-    <a href="/Escritorio.php" class="btn">Escritorio</a>
     <a href="/editar_menu.php" class="btn">Editar menú</a>
+    <a href="/parametros.php" class="btn">Parámetros</a>
+    <a href="/Escritorio.php" class="btn">Escritorio</a>
     <a href="/alimentos.php" class="btn">Alimentos</a>
     <a href="/calculadora.php" class="btn">Calculadora</a>
-    <a href="/parametros.php" class="btn">Parámetros</a>
     <a href="/logout.php" class="btn">Salir</a>
   </div>
 

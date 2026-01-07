@@ -64,6 +64,7 @@ $p = $st->fetch(PDO::FETCH_ASSOC);
 </head>
 <body>
   <div class="desk-buttons">
+    <a href="/historial.php" class="btn">Historial</a>
     <a href="/escritorio.php" class="btn">Escritorio</a>
     <a href="/alimentos.php" class="btn">Alimentos</a>
     <a href="/calculadora.php" class="btn">Calculadora</a>

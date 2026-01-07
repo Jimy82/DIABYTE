@@ -53,11 +53,11 @@ $csrf = csrf_token();
 </head>
 <body>
     <div class="desk-buttons">
-    <a href="/escritorio.php" class="btn">Escritorio</a>
-    <a href="/editar_menu.php" class="btn">Editar menú</a>
     <a href="/alimentos.php" class="btn">Alimentos</a>
+    <a href="/editar_menu.php" class="btn">Editar menú</a>
     <a href="/historial.php" class="btn">Historial</a>
     <a href="/parametros.php" class="btn">Parámetros</a>
+    <a href="/escritorio.php" class="btn">Escritorio</a>
     <a href="/logout.php" class="btn">Salir</a>
   </div>
 <div class="container card">

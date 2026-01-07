@@ -236,10 +236,11 @@ $okFlag = isset($_GET['ok']) && (int)$_GET['ok'] === 1;
 </head>
 <body>
   <div class="desk-buttons">
-    <a href="/Escritorio.php" class="btn">Escritorio</a>
-    <a href="/alimentos.php" class="btn">Alimentos</a>
     <a href="/calculadora.php" class="btn">Calculadora</a>
+    <a href="/historial.php" class="btn">Historial</a>
     <a href="/parametros.php" class="btn">Parámetros</a>
+     <a href="/Escritorio.php" class="btn">Escritorio</a>
+     <a href="/alimentos.php" class="btn">Alimentos</a>
     <a href="/logout.php" class="btn">Salir</a>
   </div>
   <header>
